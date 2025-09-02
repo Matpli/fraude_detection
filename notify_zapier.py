@@ -40,7 +40,7 @@ def notify_fraud_zapier(**kwargs):
     cursor = conn.cursor()
 # recherche si fraude dans les 5 dernieres entrees de la table fraud_predictions
     cursor.execute("""
-        SELECT merchant, amt, city, state, prediction, job, TO_TIMESTAMP(unix_time) AS event_time
+        SELECT merchant, amt, city, state, prediction, job
         FROM (
             SELECT *
             FROM fraud_predictions
@@ -55,9 +55,9 @@ def notify_fraud_zapier(**kwargs):
         print("Aucune fraude détectée dans les 5 dernières prédictions.")
     else:
         # Construction du tableau HTML 
-        html_table = "<table border='1'><tr><th>Merchant</th><th>Amount</th><th>City</th><th>State</th><th>Job</th><th>Prediction</th><th>Event Time</th></tr>"
+        html_table = "<table border='1'><tr><th>Merchant</th><th>Amount</th><th>City</th><th>State</th><th>Job</th><th>Prediction</th></tr>"
         for r in rows:
-            html_table += f"<tr><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td><td>{r[5]}</td><td>{r[4]}</td><td>{r[6]}</td></tr>"
+            html_table += f"<tr><td>{r[0]}</td><td>{r[1]}</td><td>{r[2]}</td><td>{r[3]}</td><td>{r[5]}</td><td>{r[4]}</td></tr>"
         html_table += "</table>"
 
         # Envoi vers Zapier
