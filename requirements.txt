@@ -1,0 +1,9 @@
+pandas
+apache-airflow-providers-amazon
+psycopg2-binary
+lightgbm
+xgboost
+boto3
+meteostat
+ccxt==1.85.*
+mlflow
