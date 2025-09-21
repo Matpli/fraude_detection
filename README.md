@@ -33,7 +33,7 @@ pip install -r requirements.txt
 | Fichier                             | Description                                                                                                                                                                              |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `training_fraude.py`                | Script principal pour l’entraînement du modèle et la prédiction de nouvelles données. Les prédictions peuvent être effectuées ponctuellement via l’API Flask ou intégrées dans les DAGs. |
-| `fraud_prediction_notifications.py` | DAG Airflow planifié toutes les minutes pour envoyer des notifications lorsqu’une fraude est détectée.                                                                                   |
+| `fraud_prediction_notifications.py` | DAG Airflow planifié toutes les minutes pour prédire les fraudes.                                                                                   |
 | `notify_zapier.py`                  | Permet d’envoyer des notifications HTTP POST vers un webhook Zapier pour automatiser les actions suite à une fraude détectée.                                                            |
 | `docker-compose.yaml`               | Configuration Docker pour exécuter Airflow                                                                                                   |
 | `requirements.txt`                  | Liste des dépendances Python nécessaires.                                                                                                                                                |
