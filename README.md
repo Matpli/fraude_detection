@@ -1,5 +1,5 @@
 # Détection de Fraude
-
+repository : https://github.com/Matpli/fraude_detection/tree/main
 Ce projet implémente un système complet de **détection de fraude** en utilisant des modèles d'apprentissage automatique et un orchestrateur de workflow (**Airflow**). Il inclut :
 
 - L’entraînement et l’inférence d’un modèle de détection de fraude.  
