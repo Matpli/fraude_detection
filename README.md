@@ -15,7 +15,7 @@ Ce projet implémente un système complet de **détection de fraude** en utilisa
 - Airflow 2.x  
 - Docker et Docker Compose (pour exécution conteneurisée)  
 - pip (gestionnaire de paquets Python)  
-
+- Accès à **Amazon Redshift**  
 ---
 
 ## 📦 Installation
